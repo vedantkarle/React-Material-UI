@@ -1,9 +1,14 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import { Typography, Button, Container, makeStyles } from "@material-ui/core";
+import SendIcon from "@material-ui/icons/Send";
+
+const useStyles = makeStyles({});
 
 export default function Create() {
+  const classes = useStyles();
+
   return (
-    <div>
+    <Container>
       <Typography
         variant="h6"
         color="textSecondary"
@@ -12,6 +17,15 @@ export default function Create() {
       >
         Create a New Note
       </Typography>
-    </div>
+
+      <Button
+        type="submit"
+        color="primary"
+        variant="contained"
+        endIcon={<SendIcon />}
+      >
+        Submit
+      </Button>
+    </Container>
   );
 }
